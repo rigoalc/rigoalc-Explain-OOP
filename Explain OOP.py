@@ -27,12 +27,16 @@ class House:
     
     # 'self' is always the first argument
     def _init_(self):
+        self.foundation = 'Piers'
         self.color = 'white'
+        self.roof = 'metal'
+        
         
     # Custom methods   
     def color(self):
         # 'self' alows acces the instace state
-        print("The", house_type, "House, is color", self.color)
+        print("The", house_type , "House, is color" , self.color , "builded on", self.foundation , ". The roof ed the", house_type , "home is" , self.roof)
+         
         
 # Create an instance to use the class
 my_house_instance = House()
