@@ -35,7 +35,7 @@ class House:
     # Custom methods   
     def color(self):
         # 'self' alows acces the instace state
-        print("The", house_type , "House, is color" , self.color , "builded on", self.foundation , ". The roof ed the", house_type , "home is" , self.roof)
+        print("The", self.house_type , "House, is color" , self.color , "builded on", self.foundation , ". The roof of the", self.house_type , "home is" , self.roof)
          
         
 # Create an instance to use the class
