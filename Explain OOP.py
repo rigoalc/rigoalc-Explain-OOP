@@ -26,15 +26,17 @@ class House:
     house_type = 'Single family'
     # 'self' is always the first argument
     def _init_(self):
-        self.color = "White"    
+        self.color = "white"    
     # Custom methods   
-    def color(self):
+    def white(self):
         # 'self' alows acces the instace state
         print("The", self.house_type , "House, is color" , self.color)        
 # Create an instance to use the class
 my_house_instance = House()
 # Call the methods
-my_house_instance.color()
+my_house_instance.white()
+
+
 
 
 # In the example we have a class house as an object.
@@ -42,6 +44,10 @@ my_house_instance.color()
 # Inside the class is were with the variables and functions is created a new object. 
 
 # In this case printing the type and color of the House.
+
+
+
+
 
 
 
