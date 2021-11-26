@@ -1,3 +1,13 @@
+# Rodrigo Alcover
+
+# 10/23/2021
+
+# CIS-216-12292
+
+# Python Programming
+
+# Assignment explain OOP 
+
 # •	For each topic:
 # o	Define it with one paragraph
 # o	Show a small example of it in Python
@@ -7,14 +17,16 @@
 
 # TOPIC 1 Classes:
 
-# Class is a collection of data and methods. It contains all the materials and procedures that we will use to create an object. 
+# Class is a collection of data and methods. 
+
+# It contains all the materials and procedures that we will use to create an object. 
 
 # In the class, we will be able to build objects based on the materials and conditions included.
 
 
 
 # Class declaration
-class House():
+class House(): 
     # Class variables
     house_type = 'single family'
     # 'self' is always the first argument
@@ -41,16 +53,18 @@ my_house_instance.white()
 
 
 
-
 # TOPIC 2 Instance:
 
 # Instance in an object included in a class. Every time that object variates is an instance of its class. 
 
 # A Instance it is part of the given class, that has specified values. Instance can be called class instance or class object. 
 
-# #Instantiation can be seen as a construction.  
-# 
+# Instantiation can be seen as a construction.  
+
 # An object that belongs to a class Rectangle is an instance of the class.
+
+
+# Class declaration
 
 class House():
     # Class variables
@@ -85,13 +99,13 @@ my_house_instance.white()
 # It lets us have methods in the child class with the same name as the methods in the parent class.
 
 
+# Class declaration
+
 class House():
     def apartment(self):
         print("The master room is small")
-        
     def color(self):
         print("the apartment color is grey")
-    
 class ranch(House):
     def color(self): 
         print("The master room is brown")
@@ -118,9 +132,8 @@ obj_ranch.color()
 #It offer reusability code. Is not necessary to write the same code again and again.
 
 
-class House():
-    
-   
+# Class declaration
+class House():  
     def __init__(self):
         self.color = "white" 
            
@@ -135,15 +148,15 @@ class Bungalow(House):
 
 x = House()
 y = Bungalow()
-
+# Create an instance to use the class
 my_house_instance = House()
 # Call the methods
 my_house_instance.white()
 
 
-#In the example we can see that the properties from the parent class House and inherited by the child class bungalow. 
-# The child class bungalow is naming and taking the properties naming the parent class House in his definition.
-
+# In the example we can see that the properties from the parent class House are inherited by the child class bungalow. 
+# The child class bungalow taking the properties by naming the parent class House in his definition.
+# New features can be added to the child class this results in re-usability of code.
 
 #Topic 5 Private vs Public variables
 
@@ -152,6 +165,7 @@ my_house_instance.white()
 # The function of this private member function is that can only be accessed in the class.
 # The public variables are created outside of the function called Global Variables, can be used by anyone, inside or inside functions.
 
+# Class declaration
 class House():  
     def __init__(self):
         self.color = "The house color is Public-White"
@@ -160,6 +174,7 @@ class House():
         print(self.__color)
 x = House()
 print(x.color)
+# Create an instance to use the class
 my_house_instance = House()
 # Call the methods
 my_house_instance.residences()
@@ -178,9 +193,10 @@ my_house_instance.residences()
 #Multiple inheritance is when a class derived from multiple classes.
 #In other words, the derived class inherit everythong from the base class.
 
+# Class declaration
 class House():
     def color(self):
-        print("The house is white grey")
+        print("The house is grey")
 class Ranch():
     def color(self): 
         print("The ranch is brown")
@@ -193,8 +209,10 @@ class Apartment(House,Ranch):
 c = Apartment()
 c.color()
 
-#In the code example we have 2 Base Classes called House and Ranch. The class Apartment derived from the base classes.
+#In the code example we have 2 Base Classes called House and Ranch. 
+# The class Apartment derived from the base classes.
 #All the features From House and Ranch and passed to Apartment.
+
 
 
 #Topic 7 Interfaces / Duck Typing
@@ -203,9 +221,20 @@ c.color()
 # Compared with classes the interfaces define methods but the methods are abstract.
 # The interface don't implement the method, the method is implemented by the class, giving a meaning to the interfaces abstract methods.
 
+# Class declaration
+class House():
+    def color(self):
+        pass
+class Ranch(House):
+   def color(self):
+        print("The house color is added now")
 
+c = Ranch()
+c.color()
 
-
+# In the example above we have a parent class House with a commont method call color. 
+# The child class Ranch overrides functions for the parent house.
+# Child classes are ables to do different thing than the parent house.
 
 
 
@@ -213,6 +242,24 @@ c.color()
 # In Duck Typing we check for the presence of a given method or attribute.
 # The type or the class of an object is less important than the method it defines.
 # Duck-typing emphasis what the object can really do, rather than what the object is.
+
+# Class declaration
+class House():
+    def color(self):
+        print("The house is grey")
+  
+class Ranch():
+    def color(self):
+        print("The ranch is brown")
+  
+
+for obj in House(), Ranch():
+    obj.color()
+
+
+# In the example fot Duck Typing we have two different classes that don't inherit anthing from the other class.
+# Even if they have the same function name they can do different things.
+# In this case the object is pass by the two classes runing the functions of each class.
 
 
 
@@ -226,3 +273,5 @@ c.color()
 
 
 
+
+    
