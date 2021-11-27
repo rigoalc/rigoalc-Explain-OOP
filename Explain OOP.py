@@ -72,6 +72,9 @@ class House():
     # 'self' is always the first argument
     def __init__(self):
         self.color = "white"    
+        
+    def interior(self):
+        print("The house interior is not painted")
     # Custom methods   
     def white(self):
         # 'self' allows access the instace state
@@ -86,7 +89,7 @@ my_house_instance.white()
 
 # Then we can see how we call the method withe included in the class House.
 
-# The instance will call the method white and run the progrem.
+# The instance will call the method white but not the method interior.
 
 
 
